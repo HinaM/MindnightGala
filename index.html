@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindnight Gala</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/font.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9d0690b173.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div id="app">
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">LOGO
+            <!--
+            <img src="/src/img/LOGO_MASKER_2.png" alt="">
+            -->
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      
+      
+      
+      <div class="title position-absolute bottom-0 pb-5">
+         <!--
+        <div class="countdown" v-if="diff">
+          <div class="block">
+            <p class="p-0 m-0 count">{{ diff.y }}</p>
+            <p class="p-0 m-0">Years</p>
+          </div>
+          <div class="block">
+            <p class="p-0 m-0 count">{{ diff.m }}</p>
+            <p class="p-0 m-0">Months</p>
+          </div>
+          <div class="block">
+            <p class="p-0 m-0 count">{{ diff.d }}</p>
+            <p class="p-0 m-0">Days</p>
+          </div>
+         
+          <p v-if="diff">
+            <span v-if="!diff.isPast">
+              <b>{{ diff.y }} 年 {{ diff.m }} 月 {{ diff.d }} 天</b>
+            </span>
+            <span v-else>
+              <b>{{ diff.y }} 年 {{ diff.m }} 月 {{ diff.d }} 天</b>
+            </span>
+          </p>
+          <p v-else>日期格式不正確</p>
+          
+        </div>
+        -->
+        <div class="ps-5 ">
+          <p class="t1" style="font-size: 2rem;">Masker 1st Live</p>
+          <p class="t1" style="font-size: 5rem;">Midnight Gala</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          
+          <div class="modal-body position-relative">
+            <i class="fa-solid fa-xmark position-absolute" style="top:10px; right:10px; cursor: pointer;" data-bs-dismiss="modal"></i>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    
+    <!--
+    <div class="marquee py-4" aria-label="活動跑馬燈">
+      <div class="marquee__inner" style="--gap:30px; --dur:15s;">
+        <span class="text-uppercase fw-bolder">taipei nov.12<i class="fa-solid fa-square-arrow-up-right ms-2"></i></span>
+        
+      </div>
+      <div class="marquee__inner is-reverse" style="--gap:30px; --dur:18s;">
+        <span class="text-uppercase fw-bolder">osaka dec.16<i class="fa-solid fa-square-arrow-up-right ms-2"></i></span>
+        
+      </div>
+    </div>
+-->
+    
+    <div class="ticket_information row p-5 same-height m-auto">
+  
+      <div class="accordion accordion-flush" id="accordionFlushInfo2">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInfo" aria-expanded="false" aria-controls="flush-collapseInfo">
+              <h5 class="p-0 m-0">入場與政策</h5>
+            </button>
+          </h2>
+          <div id="flush-collapseInfo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushInfo">
+            <div class="accordion-body">
+              <ul>
+                <li>入場時程
+                  <ul>
+                    <li>16:30 周邊販售｜17:00 A 區禮包預領｜18:00 開放入場｜19:00 開演</li>
+                    <li>請備妥：QR 票券＋身分證件；建議攜小包加速安檢。</li>
+                  </ul>
+                </li>
+                <li>安檢與禁帶
+                  <ul>
+                    <li>禁帶：專業攝影器材、自拍棒／腳架、雷射筆、罐裝玻璃瓶、易燃物、氣球、無人機等。</li>
+                    <li>涼感小電扇可；超大看板、LED 燈牌、噪音器具不可。</li>
+                    <li>安檢人員保有拒絕違規物品入場之權利。</li>
+                  </ul>
+                </li>
+                <li>遲到與再入場
+                  <ul>
+                    <li>遲到觀眾請依工作人員引導於曲目間入場。</li>
+                    <li>一經入場恕不開放再入場；離席請攜帶必要物品。</li>
+                  </ul>
+                </li>
+                <li>兒童與身心無礙
+                  <ul>
+                    <li>7–11 歲需家長陪同；每位兒童須憑票。</li>
+                    <li>輪椅席／早入場：請於【MM/DD 23:59】前至【無障礙申請表】登記。</li>
+                  </ul>
+                </li>
+                <li>退換與取消
+                  <ul>
+                    <li>依【售票系統】辦法辦理；演出取消將全額退費（不含已寄送紙本票郵資）。</li>
+                    <li>因不可抗力延期：票券自動順延；欲退票者依公告時程申請。</li>
+                  </ul>
+                </li>
+                <li>攝影授權
+                  <ul>
+                    <li>入場即表示同意主辦單位於場內進行攝錄，觀眾肖像可能出現在官方素材中。</li>
+                  </ul>
+                </li>
+                <li>防詐騙聲明
+                  <ul>
+                    <li>官方唯一售票／轉售通路為【售票系統】【官方二手平台】；其餘皆非官方。</li>
+                    <li>遇疑慮請寄信【ticket@masker.live】或私訊粉專。</li>
+                  </ul>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="accordion accordion-flush" id="accordionFlushInfo2">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInfo2" aria-expanded="false" aria-controls="flush-collapseInfo2">
+              <h5 class="p-0 m-0">現場物販須知</h5>
+            </button>
+          </h2>
+          <div id="flush-collapseInfo2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushInfo2">
+            <div class="accordion-body">
+              <ul>
+                <li>販售時間／地點
+                  <ul>
+                    <li>日期：演出日 </li>
+                    <li>時間：16:30–18:45（中場休息視現場狀況加開）</li>
+                    <li>地點：場館【大廳左側 Booth／Merch Zone】</li>
+                  </ul>
+                </li>
+                <li>付款方式
+                  <ul>
+                    <li>支援：信用卡／行動支付（Apple Pay、Google Pay）／【指定】電子票券點數</li>
+                    <li>是否收現金依現場公告為準。</li>
+                    <li>發票／收據：由【主辦—月光音像】開立；電子發票寄送至購買時提供之 Email。</li>
+                  </ul>
+                </li>
+                <li>限購與存貨
+                  <ul>
+                    <li>每人限購（除特別標註）：同款 2 件；盲抽類同一序列 10 抽／人 上限。</li>
+                    <li>A區「GALA席」贈品不對外販售；若遺失恕不補發。</li>
+                    <li>缺貨：將於官方 SNS 即時宣布；是否加印／補貨依後續公告。</li>
+                  </ul>
+                </li>
+                <li>預購／現場
+                  <ul>
+                    <li>僅限瑕疵品／錯寄於當日現場更換同款同尺碼；請於離櫃15 分鐘內檢查。</li>
+                    <li>已拆封之盲抽／紙製品不受理更換。</li>
+                    <li>非瑕疵範圍：微小色差、版型輕微差異、包裝輕微壓痕。</li>
+                  </ul>
+                </li>
+                <li>退貨政策
+                  <ul>
+                    <li>現場消費不受理退貨。商品問題請於 3 日內附照片寄至【service@masker.live】。</li>
+                  </ul>
+                </li>
+                <li>環保與包裝
+                  <ul>
+                    <li>提供付費環保提袋 NT$20；呼籲自備袋。</li>
+                    <li>壓克力類附基本保護膜；衣物以簡易包裝為主，減塑優先。</li>
+                  </ul>
+                </li>
+                <li>其他
+                  <ul>
+                    <li>排隊期間請勿占道與跨區插隊；照顧同行觀眾安全。</li>
+                    <li>現場「名帖打卡章」位於物販出口旁，歡迎蓋章留念。</li>
+                  </ul>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+    </div>
+
+<!--
+    <section id="tickets" class="container my-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="mb-3">Tickets Information</h2>
+          <p class="text-muted">MASKER 1st Live《月下的宴會》</p>
+        </div>
+    
+        <div class="col-12 col-lg-7">
+          <div class="card mb-3">
+            <div class="card-header bg-transparent"><strong>票種與價格</strong></div>
+            <div class="card-body">
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">A 鏡宴席｜<strong>NT$3,200</strong>：內圈視野、專屬通道；入場禮「儀式手套＋角色明信片套」</li>
+                <li class="mb-2">B 回響席｜<strong>NT$2,400</strong>：中層視野優；入場禮「面具徽章（隨機 1）」</li>
+                <li>C 星燈席｜<strong>NT$1,600</strong>：舒適視線；入場禮「名帖票套（一般版）」</li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="card mb-3">
+            <div class="card-header bg-transparent"><strong>開賣與優惠</strong></div>
+            <div class="card-body">
+              <p class="mb-1">開賣時間：<strong>【YYYY/MM/DD（週X）12:00】</strong> 於【售票系統名稱】</p>
+              <p class="mb-1">購買上限：A 區每筆 <strong>4</strong> 張；B/C 區每筆 <strong>6</strong> 張</p>
+              <p class="mb-1">早鳥優惠：開賣 48 小時 <strong>95 折</strong>（各區限量）</p>
+              <p class="mb-0">學生票：C 區現折 NT$200（入場需出示有效學生證）</p>
+            </div>
+          </div>
+    
+          <div class="card mb-3">
+            <div class="card-header bg-transparent"><strong>加購體驗（限量）</strong></div>
+            <div class="card-body">
+              <ul class="mb-0">
+                <li>Soundcheck 觀摩 NT$600（A/B 區可加購；禁拍攝）</li>
+                <li>舞台導覽 NT$800（演後 15 分鐘；約 10–12 分鐘）</li>
+                <li>周邊套組 NT$1,280（寫真冊＋徽章套＋序號票套）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-12 col-lg-5">
+          <div class="card mb-3">
+            <div class="card-header bg-transparent"><strong>入場與政策</strong></div>
+            <div class="card-body">
+              <ul class="mb-0">
+                <li>年齡限制：7 歲以上憑票入場；12 歲以下需家長陪同</li>
+                <li>無障礙席：售價同 C 區；可申請早入場與動線協助（<a href="#">服務表單</a>）</li>
+                <li>取票方式：電子票（QR Code），現場提供問題票/身分驗證窗口</li>
+                <li>付款方式：信用卡／行動支付（依售票系統為準）</li>
+                <li>攝影規範：第 I 章結束前可手機拍攝；禁閃光／直播／長焦設備</li>
+                <li>退換規定：依<a href="#">售票系統</a>規範；延期/取消將另行公告</li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="card">
+            <div class="card-header bg-transparent"><strong>注意事項</strong></div>
+            <div class="card-body">
+              <p class="mb-2">僅透過官方通路購票；轉售請使用指定平台。</p>
+              <p class="mb-1 small mb-0">客服：<a href="mailto:ticket@masker.live">ticket@masker.live</a>／無障礙：<a href="mailto:access@masker.live">access@masker.live</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  -->
+
+
+    
+    
+<!--
+    <div class="marquee py-4" aria-label="活動跑馬燈">
+      <div class="marquee__inner" style="--gap:30px; --dur:20s;font-size: 20px;">
+        <span class="text-uppercase fw-bolder"><i class="fa-solid fa-chevron-right me-2"></i>Teaser Setlist<i class="fa-solid fa-chevron-left ms-2"></i></span>
+        
+      </div>
+      
+    </div>
+  -->
+<!--
+    <div class="accordion accordion-flush" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <i class="fa-solid fa-0"></i><i class="fa-solid fa-1 me-2"></i> Le Rite d’Ouverture
+            <i class="fa-solid fa-arrow-down acc-icon ms-auto"></i>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul>
+              <li v-for="i in setlist.filter(i => i.order === '01')">{{i.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <i class="fa-solid fa-0"></i><i class="fa-solid fa-2 me-2"></i> Le Banquet des miroirs
+            <i class="fa-solid fa-arrow-down acc-icon ms-auto"></i>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul>
+              <li v-for="i in setlist.filter(i => i.order === '02')">{{i.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <i class="fa-solid fa-0"></i><i class="fa-solid fa-3 me-2"></i> Le Vrai Nom
+            <i class="fa-solid fa-arrow-down acc-icon ms-auto"></i>
+            
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul>
+              <li v-for="i in setlist.filter(i => i.order === '03')">{{i.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <i class="fa-solid fa-0"></i><i class="fa-solid fa-4 me-2"></i>Encore
+            <i class="fa-solid fa-arrow-down acc-icon ms-auto"></i>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul>
+              <li v-for="i in setlist.filter(i => i.order === 'Encore')">{{i.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+
+
+    <h1 class="text-center mt-5">SCHEDULE</h1> 
+    <div class="schedule row p-5  m-auto">
+  
+      <div class="col-12 col-md-6 w100">
+        <div class="detail">
+          <div class="row p-2">
+            <div class="col-4 d-flex flex-column align-items-center justify-content-center date p-2 text-center" style="border: 1px solid #000;">
+              <div>
+                <h3 class="m-0 p-0">10.12</h3>
+              </div>
+              <div>
+                <p class="m-0 p-0">Sun.</p>
+              </div>
+            </div>
+            <div class="col-8 d-flex align-items-center justify-content-center p-2 flex-column text-center" style="border: 1px solid #000;">
+              <p class="p-0 m-0">{城市}{場館}</p>
+              <p class="p-0 m-0">入場 18:00｜開演 19:30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-12 col-md-6 w100">
+        <div class="detail">
+          <div class="row p-2">
+            <div class="col-4 d-flex flex-column align-items-center justify-content-center date p-2" style="border: 1px solid #000;">
+              <h3 class="m-0 p-0">11.16</h3>
+              <p class="m-0 p-0">Sun.</p>
+            </div>
+            <div class="col-8 d-flex align-items-center justify-content-center p-2 flex-column" style="border: 1px solid #000;">
+              <p class="p-0 m-0">{城市}{場館}</p>
+              <p class="p-0 m-0">入場 18:00｜開演 19:30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+    
+    </div>
+
+    <h1 class="text-center mt-5">TICKETS</h1> 
+    <div class="ticket_price row p-5 same-height m-auto">
+  
+      <div class="ca col-12 col-md-4 d-flex">
+        <div class="card w-100">
+          <div class="card-header bg-transparent d-flex align-items-center justify-content-center flex-column">
+            <h3 class="m-0 p-0">A 區</h3>
+            <p class="m-0 p-0">GALA席</p>
+          </div>
+          <div class="card-body">
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>舞台正面前排／內圈，附專屬通道</li>
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>特典：儀式手套＋角色明信片套（4 入）</li>
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>專屬燈海區，儀式段落優先互動</li>
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>演後 3 分鐘留座謝幕（禁止拍攝）</li>
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>票面序號金箔印刷</li>
+            </ul>
+          </div>
+          <div class="card-footer bg-transparent d-flex align-items-center justify-content-center">
+            <h5 class="p-0 m-0 py-1">NTD$ 3200</h5>
+          </div>
+        </div>
+      </div>
+    
+      <div class="ca col-12 col-md-4 d-flex">
+        <div class="card w-100">
+          <div class="card-header bg-transparent d-flex align-items-center justify-content-center flex-column">
+            <h3 class="m-0 p-0">B 區</h3>
+            <p class="m-0 p-0">MASQUERADE席</p>
+          </div>
+          <div class="card-body">
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>中央／側看區視線佳，含二樓前排</li>
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>特典：面具徽章（隨機 1 款）</li>
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>儀式段落合唱口令參與</li>
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>官方寫真冊購買 9 折資格（現場限量）</li>
+            </ul>
+          </div>
+          <div class="card-footer bg-transparent d-flex align-items-center justify-content-center">
+            <h5 class="p-0 m-0 py-1">NTD$ 2400</h5>
+          </div>
+        </div>
+      </div>
+    
+      <div class="ca col-12 col-md-4 d-flex">
+        <div class="card w-100">
+          <div class="card-header bg-transparent d-flex align-items-center justify-content-center flex-column">
+            <h3 class="m-0 p-0">C 區</h3>
+            <p class="m-0 p-0">BALCONY席</p>
+          </div>
+          <div class="card-body">
+            <ul class="fa-ul">
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>全場對號入座，視線不遮擋</li>
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>特典：名帖票套（一般版）</li>
+              <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>QR名帖點燈互動參與</li>
+            </ul>
+          </div>
+          <div class="card-footer bg-transparent d-flex align-items-center justify-content-center">
+            <h5 class="p-0 m-0 py-1">NTD$ 1600</h5>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+    <h1 class="text-center mt-5">TICKET INFORMATION</h1> 
+    <div class="ticket_information row p-5 same-height m-auto">
+  
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <h5 class="p-0 m-0">一般販賣</h5>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li>開賣時間：【MM/DD（週X）12:00】於【售票系統】同步啟售</li>
+                <li>付款方式：信用卡／行動支付／超商代碼（代碼繳費保留【X】小時）</li>
+                <li>票券型式：電子票（可於帳戶內申請郵寄紙本；手續費【NT$X】）</li>
+                <li>取票：QR 票券於付款成功後顯示於【我的票券】；紙本寄送約【5–7】工作天</li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="accordion accordion-flush" id="accordionFlushExample3">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <h5 class="p-0 m-0">當日售票</h5>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample3">
+            <div class="accordion-body">
+              <ul>
+                <li>現場售票處：場館【大廳右側／Box Office】於 16:00 開放。</li>
+                  <li>販售內容：技術位回收／零散座位／退票釋出。</li>
+                  <li>付款：信用卡為主；是否支援現金以現場公告為準。</li>
+                  <li>候補機制：如無票，現場可登記候補名單；依序以簡訊通知。</li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="accordion accordion-flush" id="accordionFlushExample4">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              <h5 class="p-0 m-0">二次轉售</h5>
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample3">
+            <div class="accordion-body">
+              <ul>
+                <li>官方唯一合法轉售通路：【官方二手平台】。</li>
+                <li>價格上限：原票面價 ±【10%】手續費；嚴禁溢價。</li>
+                <li>轉讓時程：為防詐騙，QR 轉讓功能於開演前 48 小時停止。</li>
+                <li>身份驗證：轉讓後新持票人需完成手機／email 驗證方可入場。</li>
+                <li>私下交易風險高：任何私訊索取驗證碼、要求離站匯款者皆為可疑；請檢舉至【ticket@masker.live】。</li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="accordion accordion-flush" id="accordionFlushExample2">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <h5 class="p-0 m-0">早鳥限定<span class="ms-2 badge text-bg-secondary" style="border-radius: 0;">已截止</span></h5>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
+            <div class="accordion-body">
+              <ul>
+                <li>販售期間：【MM/DD（週X）12:00】–【MM/DD 11:59】（48 小時／或售完為止）</li>
+                  <li>折扣：全分區 95 折（A/B/C；每會員限購【4】張）</li>
+                  <li>通路：僅限【售票系統 APP／官網】</li>
+                  <li>資格：需完成會員驗證；逾期恕不補辦</li>
+                  <li>票種：電子票為主（可付費加購紙本取票）</li>
+              </ul>
+              
+              <div class="alert alert-warning" role="alert" style="border-radius: 0;"><i class="fa-solid fa-triangle-exclamation me-2"></i>早鳥與其他折扣（學生票、套票）不可同時使用。</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+    </div>
+
+    
+    
+    
+    <div class="news row p-5 m-auto">
+      
+        <div class="col-12 col-md-4 ">
+          <h1 class="text-center mb-5 mb-md-0">NEWS</h1>
+        </div>
+        <div class=" col-12 col-md-8 m-auto">
+
+          <div class="news_block p-3 mb-2" v-for="i in 4">
+            <div class="title"> <span class="badge rounded-pill bg-msk text-white me-2">お知らせ</span> 2025-10-25</div>
+            <div class="mt-2">當日時程：16:30 周邊販售｜17:00 A 區預領禮｜18:00 開放入場｜19:30 開演。請依票面區域從【W/E】側入口入場；現場設置行李置物區與「信箱站」收信。A 區與輪椅席設快速驗票通道。</div>
+          </div>
+          <div >
+            <p class="text-end m-0 mt-2">MORE INFOs<i class="fa-solid fa-arrow-right ms-2"></i></p>
+          </div>
+        </div>
+      
+    </div>
+
+    <h1 class="text-center mt-5">GOODS</h1> 
+    <div class="goods row p-5 m-auto">
+  
+      <div class="row px-3 m-auto">
+        <div class="col-12 col-sm-6 col-lg-4 w100 mb-3 " v-for="i in 12">
+          <div class="detail mx-1  mx-md-3" >
+            <img src="https://i0.wp.com/no333.com.tw/wp-content/uploads/43_dove_grey.png?w=500&ssl=1" alt="" class="img-fluid">
+            <p class="m-0 p-0">Official Photobook《The Guests》 64P</p>
+            <p class="m-0 p-0">NT$780（首刷 NT$880）</p>
+          </div>
+        </div>
+        
+      </div>
+      
+    
+      
+    
+    </div>
+
+    
+    
+  </div>
+
+    
+
+</body>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</html>

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Serif+TC:wght@200..900&display=swap');
+:root{
+  --brand-color: #24295d;
+  --golden: #d8b26c;
+  --text-color: #f7f7f7;
+}
+*{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Cinzel", serif;
+}
+header{
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden; 
+  color: var(--text-color);
+  z-index: 0; 
+}
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(/src/img/101402291_p15_master1200.jpg) center / cover no-repeat;
+  filter: grayscale(60%) blur(4px);
+  z-index: -1;
+}
+header > * {
+  position: relative;
+  z-index: 1;
+}
+header nav{
+  background-color:none !important;
+  color: var(--text-color) !important;
+  font-size: 2vw !important;
+}
+header a{
+  color: var(--text-color) !important;
+}
+header .title{
+  font-weight: 700;
+}
+.navbar-dark .navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+}
+header .navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+}
+header .navbar-toggler:focus,
+header .navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+header i{
+  color: var(--text-color);
+}
+.navbar-brand img{
+  height: 100px;
+}
+.countdown{
+  display: flex;
+  align-items: center;
+}
+header .t1{
+  text-shadow: 1px 2px var(--golden);
+  font-size: 48px;
+  margin: 0;
+}
+
+.countdown .block{
+  margin-right: 10px;
+  width: 80px;
+  text-align: center;
+  background-color: var(--golden);
+  color: var(--text-color);
+  border-radius: 3px;
+}
+.countdown .block .count{
+  background-color: #f7f7f7;
+  color: var(--brand-color);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 5px 0 !important;
+}
+
+/* CSS */
+.marquee{
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  background-color: #0d1717;
+}
+
+.marquee__inner{
+  --gap: 100px;     /* 每個項目之間的距離 */
+  --dur: 15s;      /* 跑動速度（越小越快）*/
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  will-change: transform;
+  animation: marquee-scroll var(--dur) linear infinite;
+  font-size: 30px;
+  color:var(--text-color);
+}
+
+/* 讓文字好看一點，可自行調整 */
+.marquee__inner span{
+  font-weight: 600;
+  letter-spacing: .02em;
+  flex: 0 0 auto;
+}
+
+/* 無縫循環：移動到 -50%（因為內容被複製成兩份） */
+@keyframes marquee-scroll{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* 無障礙：尊重使用者的降速偏好 */
+@media (prefers-reduced-motion: reduce){
+  .marquee__inner{ animation-duration: 999s; }
+}
+
+.marquee__inner.is-reverse{
+  animation-direction: reverse;   /* 反方向 */
+}
+
+
+.accordion-button{
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  
+}
+.accordion-button:focus,
+.accordion-button:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.news,.ticket_price,.setlist,.schedule,.ticket_information,.goods{
+  width: 100%;
+  
+  background-color: #fff;
+}
+.goods *{
+  border: 1px solid #000;
+}
+.schedule .date{
+  background-color: var(--brand-color);
+  color: var(--golden);
+}
+.schedule .detail{
+  
+}
+.news_block{
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+.news_block .title{
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.same-height {
+  align-items: stretch;
+  row-gap: 1rem;
+}
+
+.card {
+  border: 1px solid #000 !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+}
+.card:hover{
+  box-shadow: 5px 5px var(--brand-color);
+}
+.card-body {
+  flex: 1 1 auto;
+}
+.fa-ul .fa-li{
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.75rem;
+  background-color: var(--brand-color);
+  color: var(--text-color);
+  border-radius: 100%;
+} 
+.accordion-item{
+  border: #000 1px solid !important;
+}
+/*
+.card-footer{
+  cursor: pointer;
+}
+*/
+.bg-msk{
+  background-color: var(--brand-color) !important;
+}
+
