@@ -147,7 +147,7 @@ header .t1{
   background-color: #fff;
 }
 .goods *{
-  border: 1px solid #000;
+  /*border: 1px solid #000;*/
 }
 .schedule .date{
   background-color: var(--brand-color);
