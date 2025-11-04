@@ -21,7 +21,7 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url(/src/img/101402291_p15_master1200.jpg) center / cover no-repeat;
+  background: url(./src/img/101402291_p15_master1200.jpg) center / cover no-repeat;
   filter: grayscale(60%) blur(4px);
   z-index: -1;
 }
