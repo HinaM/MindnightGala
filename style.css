@@ -253,4 +253,8 @@ a{
 .bg-msk{
   background-color: var(--brand-color) !important;
 }
+.goods{
+  
+  color: var(--text-color);
+}
 
