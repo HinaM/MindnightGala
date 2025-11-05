@@ -14,52 +14,61 @@
 <body>
 
   <div id="app">
-    <header class="d-flex align-items-center justify-content-center">
+    <header class="d-flex align-items-center justify-content-center flex-column">
       
 
-      <div class="text-center">
-        <h3 class="p-0 m-0">Masker 1st Live</h3>
+      <div class="text-center ">
+        <h3 class="p-0 m-0 ">Masker 1st Live</h3>
         <h1>MINDNIGHT GALA</h1>
       </div>
       
-      <!--
-      <div class="title position-absolute bottom-0 pb-5">
+      
+      <div class="title  pb-5">
          
         <div class="countdown" v-if="diff">
-          <div class="block">
-            <p class="p-0 m-0 count">{{ diff.y }}</p>
-            <p class="p-0 m-0">Years</p>
+          <div v-if="!diff.isPast" class="d-flex">
+            
+            <div class="block">
+              <p class="p-0 m-0 count">{{ diff.y }}</p>
+              <p class="p-0 m-0">Years</p>
+            </div>
+            <div class="block">
+              <p class="p-0 m-0 count">{{ diff.m }}</p>
+              <p class="p-0 m-0">Months</p>
+            </div>
+            <div class="block">
+              <p class="p-0 m-0 count">{{ diff.d }}</p>
+              <p class="p-0 m-0">Days</p>
+            </div>
           </div>
-          <div class="block">
-            <p class="p-0 m-0 count">{{ diff.m }}</p>
-            <p class="p-0 m-0">Months</p>
+
+          <div v-else>
+            <div class="block">
+              <p class="p-0 m-0 count">{{ diff.y }}</p>
+              <p class="p-0 m-0">Years</p>
+            </div>
+            <div class="block">
+              <p class="p-0 m-0 count">{{ diff.m }}</p>
+              <p class="p-0 m-0">Months</p>
+            </div>
+            <div class="block">
+              <p class="p-0 m-0 count">{{ diff.d }}</p>
+              <p class="p-0 m-0">Days</p>
+            </div>
           </div>
-          <div class="block">
-            <p class="p-0 m-0 count">{{ diff.d }}</p>
-            <p class="p-0 m-0">Days</p>
-          </div>
+          
          
-          <p v-if="diff">
-            <span v-if="!diff.isPast">
-              <b>{{ diff.y }} 年 {{ diff.m }} 月 {{ diff.d }} 天</b>
-            </span>
-            <span v-else>
-              <b>{{ diff.y }} 年 {{ diff.m }} 月 {{ diff.d }} 天</b>
-            </span>
-          </p>
+          
           <p v-else>日期格式不正確</p>
           
         </div>
         
-        <div class="ps-5 ">
-          <p class="t1" style="font-size: 2rem;">Masker 1st Live</p>
-          <p class="t1" style="font-size: 5rem;">Midnight Gala</p>
-        </div>
+        
       </div>
-      -->
+    
     </header>
 
-    <!-- Modal -->
+    <!-- Modal 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
@@ -71,7 +80,7 @@
         </div>
       </div>
     </div>
-
+-->
     
     <!--
     <div class="marquee py-4" aria-label="活動跑馬燈">
@@ -92,7 +101,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInfo" aria-expanded="false" aria-controls="flush-collapseInfo">
-              <h5 class="p-0 m-0">入場與政策</h5>
+              <h5 class="p-0 m-0">入場規範</h5>
             </button>
           </h2>
           <div id="flush-collapseInfo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushInfo">
@@ -100,33 +109,33 @@
               <ul>
                 <li>入場時程
                   <ul>
-                    <li>16:30 周邊販售｜17:00 A 區禮包預領｜18:00 開放入場｜19:00 開演</li>
-                    <li>請備妥：QR 票券＋身分證件；建議攜小包加速安檢。</li>
+                    <li>16:30 周邊販售｜17:00 A區禮包預領｜18:00 開放入場｜19:30 開演</li>
+                    <li>請備妥：QR票券、身分證件，建議攜小包加速安檢。</li>
                   </ul>
                 </li>
                 <li>安檢與禁帶
                   <ul>
-                    <li>禁帶：專業攝影器材、自拍棒／腳架、雷射筆、罐裝玻璃瓶、易燃物、氣球、無人機等。</li>
-                    <li>涼感小電扇可；超大看板、LED 燈牌、噪音器具不可。</li>
+                    <li>嚴禁攜帶專業攝影器材、自拍棒／腳架、雷射筆、罐裝玻璃瓶、易燃物、氣球、無人機等入場。</li>
+                    <li>可攜帶涼感小電扇／不可攜帶超大看板、LED 燈牌、噪音器具等道具。</li>
                     <li>安檢人員保有拒絕違規物品入場之權利。</li>
                   </ul>
                 </li>
                 <li>遲到與再入場
                   <ul>
                     <li>遲到觀眾請依工作人員引導於曲目間入場。</li>
-                    <li>一經入場恕不開放再入場；離席請攜帶必要物品。</li>
+                    <li>一經出場恕不開放再入場，離席請攜帶必要物品。</li>
                   </ul>
                 </li>
                 <li>兒童與身心無礙
                   <ul>
-                    <li>7–11 歲需家長陪同；每位兒童須憑票。</li>
-                    <li>輪椅席／早入場：請於【MM/DD 23:59】前至【無障礙申請表】登記。</li>
+                    <li>13歲以下觀眾需家長陪同入場。</li>
+                    <li>無障礙席：請於開演前三工作日至【<a href="#">無障礙申請表</a>】登記。</li>
                   </ul>
                 </li>
                 <li>退換與取消
                   <ul>
-                    <li>依【售票系統】辦法辦理；演出取消將全額退費（不含已寄送紙本票郵資）。</li>
-                    <li>因不可抗力延期：票券自動順延；欲退票者依公告時程申請。</li>
+                    <li>依【<a href="#">售票系統</a>】辦法辦理，演出取消將全額退費（不含已寄送紙本票郵資）。</li>
+                    <li>遇不可抗力之因素，票券將自動順延至官方公告日期，欲退票者依公告時程申請。</li>
                   </ul>
                 </li>
                 <li>攝影授權
@@ -136,8 +145,8 @@
                 </li>
                 <li>防詐騙聲明
                   <ul>
-                    <li>官方唯一售票／轉售通路為【售票系統】【官方二手平台】；其餘皆非官方。</li>
-                    <li>遇疑慮請寄信【ticket@masker.live】或私訊粉專。</li>
+                    <li>官方唯一售票／轉售通路為【<a href="#">售票系統</a>】【<a href="#">官方二手平台</a>】。</li>
+                    <li>遇疑慮請寄信【<a href="#">ticket@masker.live</a>】或私訊粉專。</li>
                   </ul>
                 </li>
               </ul>
@@ -362,7 +371,7 @@
     -->
 
 
-    <h1 class="text-center mt-5">SCHEDULE</h1> 
+    <h1 class="text-center mt-5 tit">SCHEDULE</h1> 
     <div class="schedule row p-3 p-md-5  m-auto">
   
       <div class="col-12 col-md-6 w100">

@@ -3,12 +3,39 @@
   --brand-color: #24295d;
   --golden: #d8b26c;
   --text-color: #f7f7f7;
+  --bgc: #0a2131;
 }
 *{
   position: relative;
   margin: 0;
   padding: 0;
   font-family: "Cinzel", serif;
+  
+}
+@keyframes fadeOut{
+  from { opacity: 1; }
+  to   { opacity: 0.5; }
+}
+::selection {
+	background: var(--brand-color);
+	color: var(--golden);
+}
+html, body { height: 100%; }
+body{
+  margin: 0;
+  background: transparent;
+}
+body::before{
+  content: "";
+  position: fixed; 
+  inset: 0;
+  z-index: -1; 
+  background: url(./src/img/101402291_p15_master1200.jpg) center/cover no-repeat;
+  filter: grayscale(60%) blur(5px);
+  pointer-events: none;
+}
+h1{
+  color: var(--text-color) !important;
 }
 header{
   position: relative;
@@ -16,7 +43,13 @@ header{
   overflow: hidden; 
   color: var(--text-color);
   z-index: 0; 
+  /*
+  animation: fadeOut linear both;
+  animation-timeline: scroll(root block);
+  animation-range: 0 100vh;
+  */
 }
+/*
 header::before {
   content: "";
   position: absolute;
@@ -25,6 +58,7 @@ header::before {
   filter: grayscale(70%) blur(4px);
   z-index: -1;
 }
+*/
 header > * {
   position: relative;
   z-index: 1;
@@ -56,6 +90,15 @@ header .navbar-toggler:active {
 header i{
   color: var(--text-color);
 }
+.fade-text-bottom{
+  /* 讓文字換行 */
+  white-space: normal;
+  /* 只對文字這層做遮罩，背景不受影響 */
+  -webkit-mask-image: linear-gradient(#000 70%, transparent 100%);
+          mask-image: linear-gradient(#000 70%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+}
 .navbar-brand img{
   height: 100px;
 }
@@ -68,7 +111,10 @@ header .t1{
   font-size: 48px;
   margin: 0;
 }
-
+header h1{
+  text-shadow: 1px 2px var(--golden);
+  font-size: 60px;
+}
 .countdown .block{
   margin-right: 10px;
   width: 80px;
@@ -127,24 +173,31 @@ header .t1{
   animation-direction: reverse;   /* 反方向 */
 }
 
-
+.accordion-item{
+  border: none !important;
+}
 .accordion-button{
   border: none !important;
   box-shadow: none !important;
-  background-color: transparent !important;
-  
+  background-color: var(--golden) !important;
+  color: var(--brand-color) !important;
 }
 .accordion-button:focus,
 .accordion-button:active {
   outline: none !important;
   box-shadow: none !important;
   background-color: transparent !important;
+  background-color: var(--golden) !important;
+  color: var(--brand-color) !important;
 }
 
+a{
+  color: var(--golden) !important;
+}
 .news,.ticket_price,.setlist,.schedule,.ticket_information,.goods{
   width: 100%;
   
-  background-color: #fff;
+  background-color: var();
 }
 .goods *{
   /*border: 1px solid #000;*/
@@ -178,7 +231,7 @@ header .t1{
   transition: 0.2s;
 }
 .card:hover{
-  box-shadow: 5px 5px var(--brand-color);
+  box-shadow: 5px 5px var(--golden);
 }
 .card-body {
   flex: 1 1 auto;
