@@ -201,7 +201,8 @@ a{
 }
 .news_block{
   border-radius: 5px;
-  border: 1px solid #000;
+  /*border: 1px solid #000;*/
+  background-color: rgb(255, 255, 255);
 }
 .news_block .title{
   font-size: 0.8rem;
