@@ -124,7 +124,7 @@ header h1{
   background-color: #fff;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
-  color: var(--golden);
+  color: var(--brand-color);
   font-size: x-large;
 }
 
