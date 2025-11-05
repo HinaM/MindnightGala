@@ -49,16 +49,6 @@ header{
   animation-range: 0 100vh;
   */
 }
-/*
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url(./src/img/101402291_p15_master1200.jpg) center / cover no-repeat;
-  filter: grayscale(70%) blur(4px);
-  z-index: -1;
-}
-*/
 header > * {
   position: relative;
   z-index: 1;
