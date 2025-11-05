@@ -24,37 +24,37 @@
         </div>
         
         
-        <div class="title  pb-5">
+        <div class="title  pt-3">
            
           <div class="countdown" v-if="diff">
-            <div v-if="!diff.isPast" class="d-flex">
+            <div v-if="!diff.isPast" class="d-flex row cc align-items-center justify-content-center">
               
-              <div class="block">
-                <p class="p-0 m-0 count">{{ diff.y }}</p>
-                <p class="p-0 m-0">Years</p>
+              <div class="col-3 block p-0">
+                <p class="p-0 m-0 py-2 count">{{ diff.y }}</p>
+                <p class="p-0 m-0 py-2">Years</p>
               </div>
-              <div class="block">
-                <p class="p-0 m-0 count">{{ diff.m }}</p>
-                <p class="p-0 m-0">Months</p>
+              <div class="col-3 block p-0">
+                <p class="p-0 m-0 py-2 count">{{ diff.m }}</p>
+                <p class="p-0 m-0 py-2">Months</p>
               </div>
-              <div class="block">
-                <p class="p-0 m-0 count">{{ diff.d }}</p>
-                <p class="p-0 m-0">Days</p>
+              <div class="col-3 block p-0">
+                <p class="p-0 m-0 py-2 count">{{ diff.d }}</p>
+                <p class="p-0 m-0 py-2">Days</p>
               </div>
             </div>
   
             <div v-else>
-              <div class="block">
-                <p class="p-0 m-0 count">{{ diff.y }}</p>
-                <p class="p-0 m-0">Years</p>
+              <div class="col-3 block p-0">
+                <p class="p-0 m-0 py-2 count">{{ diff.y }}</p>
+                <p class="p-0 m-0 py-2">Years</p>
               </div>
-              <div class="block">
-                <p class="p-0 m-0 count">{{ diff.m }}</p>
-                <p class="p-0 m-0">Months</p>
+              <div class="col-3 block p-0">
+                <p class="p-0 m-0 py-2 count">{{ diff.m }}</p>
+                <p class="p-0 m-0 py-2">Months</p>
               </div>
-              <div class="block">
-                <p class="p-0 m-0 count">{{ diff.d }}</p>
-                <p class="p-0 m-0">Days</p>
+              <div class="col-3 block p-0">
+                <p class="p-0 m-0 py-2 count">{{ diff.d }}</p>
+                <p class="p-0 m-0 py-2">Days</p>
               </div>
             </div>
             

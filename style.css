@@ -63,6 +63,10 @@ header a{
 }
 header .title{
   font-weight: 700;
+  width: 100%;
+}
+header .cc{
+  width: 100%;
 }
 .navbar-dark .navbar-toggler {
   border: none !important;
@@ -95,6 +99,7 @@ header i{
 .countdown{
   display: flex;
   align-items: center;
+  width: 100%;
 }
 header .t1{
   text-shadow: 1px 2px var(--golden);
@@ -105,23 +110,25 @@ header h1{
   text-shadow: 1px 2px var(--golden);
   font-size: 60px;
 }
+
 .countdown .block{
   margin-right: 10px;
-  width: 80px;
+  /*width: 80px;*/
   text-align: center;
   background-color: var(--golden);
   color: var(--text-color);
   border-radius: 3px;
 }
 .countdown .block .count{
-  background-color: #f7f7f7;
-  color: var(--brand-color);
-  border-top-left-radius: 3px;
+  width: 100%;
+  background-color: #fff;
   border-top-right-radius: 3px;
-  padding: 5px 0 !important;
+  border-top-left-radius: 3px;
+  color: var(--golden);
+  font-size: x-large;
 }
 
-/* CSS */
+
 .marquee{
   overflow: hidden;
   white-space: nowrap;
