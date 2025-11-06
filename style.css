@@ -25,8 +25,9 @@
 html, body { height: 100%; }
 body{
   margin: 0;
-  background: transparent;
+  background: #3e4149 !important;
 }
+/*
 body::before{
   content: "";
   position: fixed; 
@@ -36,6 +37,7 @@ body::before{
   filter: grayscale(60%) blur(5px);
   pointer-events: none;
 }
+*/
 h1{
   color: var(--text-color) !important;
 }
