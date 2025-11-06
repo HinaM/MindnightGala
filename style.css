@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Serif+TC:wght@200..900&display=swap');
 :root{
-  --brand-color: #24295d;
-  --golden: #d8b26c;
-  --text-color: #f7f7f7;
-  --bgc: #0a2131;
+  --brand-color: #6a60a9;
+  --golden: #fbd14b;
+  --text-color: #fffcf0;
+  --bgcw: #fffcf0;
 }
 *{
   position: relative;
@@ -16,10 +16,12 @@
   from { opacity: 1; }
   to   { opacity: 0.5; }
 }
+/*
 ::selection {
 	background: var(--brand-color);
 	color: var(--golden);
 }
+*/
 html, body { height: 100%; }
 body{
   margin: 0;
@@ -227,12 +229,21 @@ a{
   display: flex;
   flex-direction: column;
   transition: 0.2s;
+  background-color: #fff !important;
+  
 }
 .card:hover{
   box-shadow: 5px 5px var(--golden);
 }
+.card-header{
+  background-color: var(--brand-color) !important;
+  color: var(--golden) !important;
+}
 .card-body {
   flex: 1 1 auto;
+}
+.card-footer{
+  background-color: #dedcee !important;
 }
 .fa-ul .fa-li{
   width: 1.25rem;
