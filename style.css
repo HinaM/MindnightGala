@@ -224,13 +224,11 @@ a{
 }
 .news_block{
   border-radius: 5px;
-  /*border: 1px solid #000;*/
-  background-color: rgb(255, 255, 255, 0.9);
+  background-color: rgb(255, 255, 255);
   transition: 0.2s;
   
 }
 .news_block:hover{
-  background-color: rgb(255, 255, 255);
   box-shadow: 5px 5px var(--golden);
 
 }
