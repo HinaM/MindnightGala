@@ -2,6 +2,7 @@
 :root{
   --brand-color: #6a60a9;
   --golden: #fbd14b;
+  --golden_done: #e7d495;
   --text-color: #fffcf0;
   --bgcw: #fffcf0;
 }
@@ -191,6 +192,17 @@ header h1{
   background-color: var(--golden) !important;
   color: var(--brand-color) !important;
 }
+.accordion-button.done,
+.accordion-button.done:focus,
+.accordion-button.done:active{
+  background-color: var(--golden_done) !important;
+  
+}
+.accordion-button.done h5{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 a{
   color: var(--golden) !important;
@@ -213,7 +225,14 @@ a{
 .news_block{
   border-radius: 5px;
   /*border: 1px solid #000;*/
+  background-color: rgb(255, 255, 255, 0.9);
+  transition: 0.2s;
+  
+}
+.news_block:hover{
   background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px var(--golden);
+
 }
 .news_block .title{
   font-size: 0.8rem;
