@@ -43,6 +43,19 @@ new Vue({
       {order:"03",name:"Blueprints for a Choir"},
       {order:"Encore",name:"After the Guests Leave (Acoustic)"}
     ],
+    goods_list:[
+      {id: 1, name: "活動場刊《The Guests》64P", des: "" , price: 780},
+      {id: 2, name: "應援手燈（30cm）", des: "" , price: 880},
+      {id: 3, name: "金箔票套《Invitation》", des: "" , price: 280},
+      {id: 4, name: "面具徽章組（4入）", des: "" , price: 520},
+      {id: 5, name: "原創 OST Mini（6曲＋口白）", des: "" , price: 520},
+      {id: 5, name: "Oversize 連帽外套（夜藍）", des: "" , price: 1080},
+      {id: 6, name: "LOGO T-Shirt（黑／白）", des: "" , price: 580},
+      {id: 7, name: "壓克力立牌（共4款）", des: "" , price: 500},
+      {id: 8, name: "A3雙面海報組（5入）", des: "" , price: 500},
+      {id: 9, name: "帆布托特（磁扣／內袋）", des: "" , price: 200},
+      {id: 10, name: "絲巾／領結兩用方巾（50×50cm）", des: "" , price: 350}
+    ],
     target: '2025/11/16'
   },
   computed: {
